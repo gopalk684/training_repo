@@ -8,14 +8,14 @@ spec:
    image: supergiantkir/animals:bear 
    volumeMounts:
    - name: demo_volume
-      mountPath: /app/data
+     mountPath: /app/data
    ports: 
    - containerPort: 80
  - name: springapp
    image: yanivomc/spring-music:latest
    volumeMounts:
    - name: demo_volume
-      mountPath: /app/data
+     mountPath: /app/data
    ports: 
    - containerPort: 8080
  volumes:
