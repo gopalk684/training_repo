@@ -8,7 +8,7 @@ spec:
    image: supergiantkir/animals:bear 
    volumeMounts:
  i   - name: demo-volume
-      mountPath: /app/data
+       mountPath: /app/data
    ports: 
    - containerPort: 80
  - name: springapp
