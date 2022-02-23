@@ -3,7 +3,7 @@ kind: Pod
 metadata: 
  name: redis_springmusic 
 spec:
- containers: 
+ containers:
  - name: animals 
    image: supergiantkir/animals:bear 
    volumeMounts:
