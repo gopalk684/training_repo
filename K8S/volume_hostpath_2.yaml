@@ -7,14 +7,14 @@ spec:
  - name: animals 
    image: supergiantkir/animals:bear 
    volumeMounts:
-    - name: animals-persistent-storage
+    - name: demo_volume
       mountPath: /app/data
    ports: 
    - containerPort: 80
  - name: springapp
    image: yanivomc/spring-music:latest
    volumeMounts:
-    - name: springapp-persistent-storage
+    - name: demo_volume
       mountPath: /app/data
    ports: 
    - containerPort: 8080
