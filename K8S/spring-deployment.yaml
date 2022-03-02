@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springmusic-deployment
+spec:
+  selector:
+    matchLabels:
+      app: spring
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  replicas: 2
+  template:
+    metadata:
+      # unlike pod-nginx.yaml, the name is not included in the meta data as a unique name is
+      # generated from the deployment name
+      labels:
+        app: spring
+    spec:
+      containers:
+      - name: spring-music
+        image: yanivomc/spring-music:latest
+        ports:
+        - containerPort: 8080
